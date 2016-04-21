@@ -1,0 +1,67 @@
+.left-col {
+	float:left;
+	width:100%;
+}
+
+.left-slim {
+	font-family:"Segoe UI",Arial,sans-serif;
+}
+
+#leftmenu h2 {
+	font-size:21px;
+	padding-left:16px;
+	margin:-4px 0 4px 0;
+	width:204px;
+}
+
+#leftmenu a {
+	display:block;
+	text-decoration:none;padding:2px 1px 1px 16px;
+	font-size:15px;
+}
+
+#leftmenu a:hover {
+	background-color:#dddddd;
+	color:#000000;
+}
+
+#leftmenu a.active {
+	background-color:#4CAF50;
+	color:#ffffff;  
+}
+
+#leftmenu {
+	padding-top: 0px;
+	display: block !important;
+	width:200px;
+	z-index:9;
+}
+
+#leftmenuinner {
+	position:fixed;
+	top:0;
+	padding-top:112px;
+	padding-bottom:0;    
+	height:100%;
+	width:16.66666%;
+	width:200px;
+	background-color:transparent;
+}
+
+#leftmenuinnerinner {
+	height:100%;
+	width:100%;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	padding-top:20px;
+}
+
+#leftmenuinnerinner:hover {
+    overflow-y:scroll;
+}
+
+#leftmenu .w3-closebtn {
+	position:absolute;
+	right:16px;
+	top:0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<title>Castles Terminal Manager System</title>
+	<link rel="stylesheet" href="styles/index.css">
+	<script type="text/javascript" src="javascripts/jquery.js"></script>
+	<script type="text/javascript" src="javascripts/ctms.js"></script>
+</head>
+<body>
+	<?php
+		session_start();
+		require_once('include/ctms_define.php');
+		require_once('ctms_account.php');
+		if(isset($_POST['poLogin']))
+		{
+			$result = Login($_POST['user'], $_POST['pwd'], get_client_ip());
+			if($result->RetCode == d_OK)
+			{
+				header("Location: main.html");
+			}
+		}
+	?>
+	<div id="logo">
+		<img src="imgs/CTOS_LOGO.png" height="250" width="350"/>
+	</div>
+	<section class="container">
+		<div align="center" class="login">
+			<h1>Login to System</h1>
+			<form id="sentLogin" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+				<p><input id="usr" type="text" name="user" value="" placeholder="Username"></p>
+				<p><input id="pwd" type="password" name="pwd" value="" placeholder="Password"></p>
+				<p><input type="submit" value="Login" name="poLogin" /></p>
+			</form>
+		</div>
+	</section>
+</body>
+</html>
